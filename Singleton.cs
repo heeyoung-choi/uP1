@@ -4,7 +4,7 @@ using UnityEngine;
 public class GenericSingleton<T> : MonoBehaviour where T : Component
 {
     // create a private reference to T instance
-    private static T instance;
+    protected static T instance;
 
     public static T Instance
     {
@@ -19,7 +19,7 @@ public class GenericSingleton<T> : MonoBehaviour where T : Component
                 // if it's null again create a new object
                 // and attach the generic instance
                 if (instance == null)
-                {
+                { 
                     GameObject obj = new GameObject();
                     obj.name = typeof(T).Name;
                     instance = obj.AddComponent<T>();

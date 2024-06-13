@@ -35,3 +35,23 @@ public class FloatAttribute
 
 
 }
+
+
+public class PhysicalAttributeCollection : Collection<FloatAttribute>
+{
+    
+    public PhysicalAttributeCollection() : base()
+    {
+    //current attribute Strength, HP, StrengthIncreaseRate, HP RecoveryRate, Endurance, EnduranceIncreaseRate, EnduranceRecoveryRate
+        
+        listAttributes.Add("Strength", new FloatAttribute("Strength", 10f, false));
+        listAttributes.Add("Health", new FloatAttribute("Health", 10f, true));
+        listAttributes.Add("StrengthIncreaseRate", new FloatAttribute("StrengthIncreaseRate", 10f, false));
+        listAttributes.Add("HealthRecoveryRate", new FloatAttribute("HealthRecoveryRate", 10f, false));
+        listAttributes.Add("Endurance", new FloatAttribute("Endurance", 10f, true));
+        listAttributes.Add("EnduranceIncreaseRate", new FloatAttribute("EnduranceIncreaseRate", 10f, false));
+        listAttributes.Add("Strength", new FloatAttribute("Strength", 10f, false));
+    
+    }
+    
+}
